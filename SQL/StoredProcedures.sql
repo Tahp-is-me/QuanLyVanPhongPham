@@ -6,11 +6,9 @@ GO
 SET QUOTED_IDENTIFIER ON;
 GO
 
-/* ================================================================
-   1. TIM SAN PHAM THEO MA HOAC TEN
+/* 1. TIM SAN PHAM THEO MA HOAC TEN
    - @TuKhoa = NULL hoac chuoi rong: xem tat ca san pham.
-   - Ket hop DANH_MUC de hien thi ten danh muc.
-   ================================================================ */
+   - Ket hop DANH_MUC de hien thi ten danh muc. */
 CREATE OR ALTER PROCEDURE dbo.usp_TimSanPham
     @TuKhoa NVARCHAR(150) = NULL
 AS
@@ -35,12 +33,10 @@ BEGIN
 END;
 GO
 
-/* ================================================================
-   2. THEM SAN PHAM MOI
+/* 2. THEM SAN PHAM MOI
    - Kiem tra tham so dau vao, ma san pham, ma danh muc.
    - Gia > 0; so luong ton >= 0 (dung voi CHECK cua CSDL).
-   - INSERT la 1 cau lenh nguyen tu, khong can transaction rieng.
-   ================================================================ */
+   - INSERT la 1 cau lenh nguyen tu, khong can transaction rieng.*/
 CREATE OR ALTER PROCEDURE dbo.usp_ThemSanPham
     @MaSP       VARCHAR(10),
     @TenSP      NVARCHAR(150),
@@ -81,12 +77,10 @@ BEGIN
 END;
 GO
 
-/* ================================================================
-   3. THONG KE DOANH THU THEO NGAY
+/*  3. THONG KE DOANH THU THEO NGAY
    - Su dung HOA_DON.TongTien dung theo CSDL nhom.
    - Hai tham so co the NULL de lay toan bo khoang thoi gian.
-   - Bao cao theo ngay, khong gom cac ngay khong phat sinh hoa don.
-   ================================================================ */
+   - Bao cao theo ngay, khong gom cac ngay khong phat sinh hoa don. */
 CREATE OR ALTER PROCEDURE dbo.usp_ThongKeDoanhThu
     @TuNgay  DATE = NULL,
     @DenNgay DATE = NULL
@@ -109,8 +103,7 @@ BEGIN
 END;
 GO
 
-/* ================================================================
-   4. BAN HANG - GIAO DICH NGUYEN TU
+/*  4. BAN HANG - GIAO DICH NGUYEN TU
    Cong viec trong CUNG 1 TRANSACTION:
       (1) Kiem tra du lieu va khoa ban ghi san pham.
       (2) Tru ton kho.
@@ -121,8 +114,7 @@ GO
    @MoPhongLoi = 1 chi danh cho DEMO hoc tap:
       Chu dong gay loi SAU khi da UPDATE / INSERT de kiem tra
       ROLLBACK co tra lai ton kho va xoa hoa don tam hay khong.
-   Khong truyen @MoPhongLoi trong nghiep vu ban hang binh thuong.
-   ================================================================ */
+   Khong truyen @MoPhongLoi trong nghiep vu ban hang binh thuong. */
 CREATE OR ALTER PROCEDURE dbo.usp_BanHang
     @MaHD       VARCHAR(15),
     @MaKH       VARCHAR(10),
