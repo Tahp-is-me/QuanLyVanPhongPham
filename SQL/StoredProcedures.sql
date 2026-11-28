@@ -1,16 +1,3 @@
-/*
-========================================================================
- DO AN CO SO DU LIEU - QUAN LY BAN HANG VAN PHONG PHAM
- PHAN 1 - NGUYEN VAN PHAT (Stored Procedures + Transaction)
-========================================================================
- YEU CAU:
-   1) Phai chay QuanLiVanPhongPham.sql cua nhom truoc de tao du 6 bang.
-   2) Chay TOAN BO file nay trong SSMS de tao/cap nhat 4 thu tuc.
-   3) Sau do chay file 02_Phat_Demo_KiemThu.sql theo tung muc.
-   4) SQL Server 2016 SP1 tro len (su dung CREATE OR ALTER).
- LUU Y: File nay CHI TAO THU TUC, khong them/sua/xoa du lieu mau.
-========================================================================
-*/
 USE QuanLyVanPhongPham;
 GO
 

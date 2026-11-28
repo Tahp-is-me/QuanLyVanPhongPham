@@ -30,8 +30,7 @@ FROM dbo.SAN_PHAM WHERE MaSP = 'SP99';
 GO
 
 -- ===================================================================
--- DEMO C: THONG KE DOANH THU (du lieu goc: 5 hoa don, 701000 dong)
--- Neu database da duoc thay doi thi ket qua co the khac.
+-- DEMO C: THONG KE DOANH THU 
 -- ===================================================================
 PRINT N'DEMO C: Thong ke doanh thu tu 10/11 den 15/11/2026';
 EXEC dbo.usp_ThongKeDoanhThu
