@@ -2,7 +2,7 @@ USE QuanLyVanPhongPham;
 GO
 
 -- ===================================================================
--- DEMO A: TIM KIEM SAN PHAM (chup man hinh ket qua SELECT)
+-- DEMO A: TIM KIEM SAN PHAM 
 -- ===================================================================
 PRINT N'DEMO A: Tim san pham theo tu khoa';
 EXEC dbo.usp_TimSanPham @TuKhoa = N'Bút';
