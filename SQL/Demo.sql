@@ -1,18 +1,3 @@
-/*
-========================================================================
- DEMO / KIEM THU PHAN NGUYEN VAN PHAT - CHAY TRONG SSMS
-========================================================================
- Trinh tu:
-   1. Chay script QuanLiVanPhongPham.sql cua nhom CHI MOT LAN (neu DB chua co).
-   2. Chay 01_Phat_StoredProcedures.sql.
-   3. Trong file nay, boi den TUNG muc demo roi bam Execute (F5).
-   4. Moi test duoc tach batch bang GO, dung F5 ca file cung hop le.
- LUU Y:
-   - Demo B them SP99 neu chua co; demo D tao HD901 neu chua co.
-   - Demo E/F co tinh gay loi va ROLLBACK; ket qua loi la MONG DOI.
-   - CHI THUC HIEN TREN DATABASE THU NGHIEM.
-========================================================================
-*/
 USE QuanLyVanPhongPham;
 GO
 
