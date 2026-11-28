@@ -208,7 +208,6 @@ BEGIN
         IF XACT_STATE() <> 0
             ROLLBACK TRANSACTION;
 
-        -- Chuyen nguyen thong bao loi ve SSMS / ung dung goi thu tuc.
         THROW;
     END CATCH;
 END;
